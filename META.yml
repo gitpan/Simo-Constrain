@@ -1,9 +1,9 @@
 ---
 name: Simo-Constrain
-version: 0.01_01
+version: 0.01_02
 author:
   - 'Yuki <kimoto.yuki@gmail.com>'
-abstract: Constrain methods for Simo;
+abstract: Constrain functions for Simo;
 license: perl
 resources:
   license: ~
@@ -14,7 +14,7 @@ build_requires:
 provides:
   Simo::Constrain:
     file: lib/Simo/Constrain.pm
-    version: 0.01_01
+    version: 0.01_02
 generated_by: Module::Build version 0.31
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

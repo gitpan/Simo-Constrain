@@ -5,7 +5,7 @@ use strict;
 use Exporter;
 use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 our @ISA = 'Exporter';
 our @EXPORT_OK = qw( is_undef is_defined is_bool is_value is_value is_ref is_str
@@ -144,13 +144,6 @@ sub is_class_name(;$){
     return 1;
 }
 
-sub is_method_name(;$){
-    my $val = shift || $_;
-    is_defined( $val ) or return 0;
-    is_str( $val ) && $val =~ /^[a-zA-Z]\w*$/ or $@ = "must be method name.( $val is bad )", return 0;
-    return 1;
-}
-
 sub blessed(;$){
     my $val = shift || $_;
     is_defined( $val ) or return 0;
@@ -170,19 +163,23 @@ sub isa($;$){
     return 1;
 }
 
+
+
 =head1 NAME
 
-Simo::Constrain - Constrain methods for Simo;
+Simo::Constrain - Constrain functions for Simo;
 
 =head1 VERSION
 
-Version 0.01_01
+Version 0.01_02
+
+Simo::Constrain is experimental stage. some function will be change.
 
 =cut
 
 =head1 SYNOPSIS
     
-    This class provede many methods intended to use with constrain option.
+    This class provede many functions intended to use with constrain option.
     
     package Book;
     use Simo;
@@ -202,12 +199,13 @@ All function can be exported.
 
 =head1 FUNCTIONS
 
-The following is each subroutin sourse code.
+The followin is constrain function.
 
 If function return false, error message is set to $@.
 
 =head2 is_undef
-
+    
+    if it is undef, return true.
     my $val = shift || $_;
     !defined($val) or $@ = "must be undef.( $val is bad )", return 0;
     return 1;
@@ -366,15 +364,6 @@ If function return false, error message is set to $@.
     my $val = shift || $_;
     is_defined( $val ) or return 0;
     is_str( $val ) && $val =~ /^(\w+::)*\w+$/ or $@ = "must be class name.( $val is bad )", return 0;
-    return 1;
-    
-=cut
-
-=head2 is_method_name
-
-    my $val = shift || $_;
-    is_defined( $val ) or return 0;
-    is_str( $val ) && $val =~ /^[a-zA-Z]\w*$/ or $@ = "must be method name.( $val is bad )", return 0;
     return 1;
     
 =cut

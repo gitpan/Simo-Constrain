@@ -276,24 +276,6 @@ BEGIN {
 
 {
     {
-        local $_ = 'a';
-        ok( is_method_name, 'is_method_name $_ true' );
-    }
-    
-    ok( is_method_name( 'azAZ' ), 'is_method_name true 1' );
-    
-    ok( !is_method_name( undef ), 'is_method_name false 1' );
-    like( $@, qr/must be defined\.\( undef is bad \)/, 'is_method_name err msg 1' );
-    
-    ok( !is_method_name( '-' ), 'is_method_name false 2' );
-    like( $@, qr/must be method name\.\( .+ is bad \)/, 'is_method_name err msg 2' );
-    
-    ok( !is_method_name( '9' ), 'is_method_name false 2' );
-    like( $@, qr/must be method name\.\( .+ is bad \)/, 'is_method_name err msg 2' );
-}
-
-{
-    {
         local $_ = bless {}, 'A';
         ok( blessed, 'blessed $_ true' );
     }
