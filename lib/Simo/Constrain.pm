@@ -5,7 +5,7 @@ use strict;
 use Exporter;
 use Carp;
 
-our $VERSION = '0.01_03';
+our $VERSION = '0.0201';
 
 our @ISA = 'Exporter';
 our @EXPORT_OK = qw( is_undef is_defined is_bool is_value is_value is_ref is_str
@@ -171,7 +171,7 @@ Simo::Constrain - Constrain functions for Simo;
 
 =head1 VERSION
 
-Version 0.01_03
+Version 0.0201
 
 Simo::Constrain is experimental stage. some function will be change.
 
