@@ -5,7 +5,7 @@ use strict;
 use Exporter;
 use Carp;
 
-our $VERSION = '0.0201';
+our $VERSION = '0.0301';
 
 our @ISA = 'Exporter';
 our @EXPORT_OK = qw( is_undef is_defined is_bool is_value is_value is_ref is_str
@@ -167,13 +167,17 @@ sub isa($;$){
 
 =head1 NAME
 
-Simo::Constrain - Constrain functions for Simo;
+Simo::Constrain - Constrain functions for Simo [DISCOURAGED]
+
+=head1 CAUTION
+
+This module is discouraged now, because I develope new module L<Object::Simple> now.
+
+L<Object::Simple> is very simple class builder. It is clean, compact, and fast.
 
 =head1 VERSION
 
-Version 0.0201
-
-Simo::Constrain is experimental stage. some function will be change.
+Version 0.0301
 
 =cut
 

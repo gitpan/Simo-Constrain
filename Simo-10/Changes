@@ -1,0 +1,177 @@
+0.1008 
+    bag fix auto_build option 
+0.1007
+    update Simo::Manual::Japanese
+0.1006
+    change new error messese
+0.1005
+    update documnet
+0.1004
+    update japanese document
+0.1003
+    update japanese document
+0.1002
+    add accessor option 'auto_build'
+0.1001
+    experimental version release
+    add import option 'new'
+0.09_05
+    add method. 'new_self_and_accessor'
+0.09_04
+    add method. 'and_super'
+0.09_03
+    1. read_only throw Simo::Error
+    2. document update
+0.09_02
+    1. update Document
+    2. use 5.008_001
+0.09_01
+    1. use Simo::Error;
+    
+0.0806
+    Build.PL requires => { 'Pod::Simple' => 3.07 }
+Version 0.0805
+    1. add Build.PL build_requires Test::Pod => 1.26
+
+Version 0.0804
+    1. add Build.PL requires => Storable
+    2. add =encoding utf-8 to Simo::Manual::Japanese
+
+Version 0.0803
+    1. bag fix default is deep copy.
+
+Version 0.0802
+    1. Document is updated.
+    2. get_attrs, get_attrs_as_hash, set_attrs, run_methods is not recommended.
+
+Version 0.0801
+    Version 0.08 first release
+
+Version 0.07_05
+    1. add REQUIRED_ATTRS method. 
+
+Version 0.07_04
+    1. mixin inherit order move last.
+
+Version 0.07_03
+    1. fix constrain error message bag.
+
+Version 0.07_02
+    1. constrain error message is easy to understand.
+    
+Version 0.07_01
+    1. add import opiton 'base' and 'mixin'.
+    2. add run_methods method.
+    
+Version 0.0601
+    1. new version release.
+
+Version 0.05_08
+    1. add method. get_attrs, get_attrs_as_hash, set_attrs
+
+Version 0.05_07
+    1. craok read_only acseccor when value is set. 
+
+Version 0.05_06
+    1. refactoring. package variable $ac_opt change rexical variable.
+
+Version 0.05_05
+    1. read_only method should be 'get_'. If not, warnings is happen.
+
+Version 0.05_04
+    1. add read_only option
+
+Version 0.05_03
+    1. refactoring. constrain, filter, trigger accessor.
+
+Version 0.05_02
+    1. refactoring. ac funciton is simplified.
+
+Version 0.05_01
+    1. I write accessor by using meta programing.
+
+Version 0.04_02
+    1. warn in case constrain, filter, trigger options order is invalid
+
+Version 0.04_01 
+    1. document is writed at new version.
+
+Version 0.03_06
+    1. fix bag undef value cannot be set.
+
+Version 0.03_05
+    1. document update
+    2. new method illegal key setting error message change
+
+Version 0.03_04
+    1. confess convert to croak because confess is bad looking.
+
+Version 0.03_03
+    the following
+    1. auto confess for constrain option
+    2. constrain, filter, and trigger option confess unless it isn't code ref
+    
+Version 0.03_02
+    referctering
+        DESTROY method is deleted.
+       _SIMO_ac_opt method is deleted.
+
+Version 0.03_01
+    developer version
+    add new method
+       1. constrain
+       2. fillter
+       3. trigger
+       
+Version 0.0206
+    referctaring Simo::ac_opt Simo::ac_define_class
+    and default value logic 
+
+Version 0.0205
+    I'm sorry. accessor listcontext is Disable. only scalar context.
+
+Version 0.0204
+    Version of Document is collected.
+
+Version 0.0203
+    I change Makefile.PL so that you can install without make.
+    
+Version 0.0202
+    I change module builder to Module::Build so that you can install without make.
+
+Version 0.0201
+    I don't pack test file in package. so I pack test file in package.
+
+Version 0.02
+    new method can receive hash ref.
+
+Version 0.01_05
+    Remove hook accessor option.
+    Add set_hook accessor option and get_hook accessor option.
+    
+    Fix sub _SIMO_ac_opt
+    $Simo::info{ class }{ $class }{ ac }{ opt } = $opt;
+    to
+    $Simo::info{ class }{ $class }{ ac }{ $key }{ opt } = $opt;
+    
+Version 0.01_04
+    fix to be right inherit order 
+    
+    unshift @{ "${caller_class}::ISA" }, __PACKAGE__;
+    to
+    push @{ "${caller_class}::ISA" }, __PACKAGE__;
+
+Version 0.01_03
+    refactoring
+    
+    qq/sub ${ac_define_class}::${key}/ . qw/{ _SIMO_ac_real( '$key' , \@_ ) }/;
+    to
+    qq/sub ${ac_define_class}::${key} { _SIMO_ac_real( '$key' , \@_ ) }/;
+
+Version 0.01_02
+    fix this failed test.
+    FAIL Simo-0.01 i386-netbsd-thread-multi-64int 4.0
+
+Version 0.01_01
+    first developer release
+

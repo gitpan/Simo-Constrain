@@ -1,0 +1,54 @@
+8
+
+dir
+1
+file:///usr/local/svn/Simo/lib
+file:///usr/local/svn/Simo
+
+
+
+2009-01-17T14:05:01.413821Z
+1
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a3e00b71-27e9-4795-ad72-98aae60bc6ad
+
+Simo.pm
+file
+
+
+
+
+2009-01-17T14:36:03.000000Z
+a1a2468f6ab5640a7fee5032dc4e0cf9
+2009-01-17T14:05:01.413821Z
+1
+root
+has-props
+
+Simo.BAK
+file
+
+
+
+
+2009-01-17T14:36:03.000000Z
+42ea1660fe0b698f5890fc730c001162
+2009-01-17T14:05:01.413821Z
+1
+root
+has-props
+

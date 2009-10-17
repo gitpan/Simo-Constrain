@@ -3,12 +3,13 @@ use ExtUtils::MakeMaker;
 WriteMakefile
 (
           'INSTALLDIRS' => 'site',
-          'NAME' => 'Simo::Constrain',
+          'NAME' => 'Simo',
           'EXE_FILES' => [],
-          'VERSION_FROM' => 'lib/Simo/Constrain.pm',
+          'VERSION_FROM' => 'lib/Simo.pm',
           'PREREQ_PM' => {
                            'Test::More' => 0,
-                           'Scalar::Util' => 0
+                           'Storable' => 0,
+                           'Simo::Error' => '0.0206'
                          }
         )
 ;

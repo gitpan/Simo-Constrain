@@ -1,20 +1,23 @@
 ---
-name: Simo-Constrain
-version: 0.0301
+name: Simo
+version: 0.1008
 author:
   - 'Yuki <kimoto.yuki@gmail.com>'
-abstract: 'Constrain functions for Simo [DISCOURAGED]'
+abstract: Very simple framework for Object Oriented Perl.
 license: perl
 resources:
   license: ~
 requires:
-  Scalar::Util: 0
+  Storable: 0
 build_requires:
+  Simo::Error: 0.0206
   Test::More: 0
 provides:
-  Simo::Constrain:
-    file: lib/Simo/Constrain.pm
-    version: 0.0301
+  DB:
+    file: lib/Simo.pm
+  Simo:
+    file: lib/Simo.pm
+    version: 0.1008
 generated_by: Module::Build version 0.31012
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
