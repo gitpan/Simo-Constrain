@@ -5,7 +5,7 @@ use strict;
 use Exporter;
 use Carp;
 
-our $VERSION = '0.0301';
+our $VERSION = '0.0302';
 
 our @ISA = 'Exporter';
 our @EXPORT_OK = qw( is_undef is_defined is_bool is_value is_value is_ref is_str
@@ -177,7 +177,7 @@ L<Object::Simple> is very simple class builder. It is clean, compact, and fast.
 
 =head1 VERSION
 
-Version 0.0301
+Version 0.0302
 
 =cut
 
